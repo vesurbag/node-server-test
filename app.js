@@ -5,9 +5,9 @@ var app = express()
 console.log('App is created')
 
 var test = require("./route")
-app.use("/test", test)
+app.use("/api/test", test)
 
-app.use("/", express.Router().get("/", function (req, res) {
+app.use("/api/", express.Router().get("/", function (req, res) {
   res.json({
     msg: 'Good'
   })
