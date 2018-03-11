@@ -7,6 +7,12 @@ console.log('App is created')
 var test = require("./route")
 app.use("/test", test)
 
+app.use("/", express.Router().get("/", function (req, res) {
+  res.json({
+    msg: 'Good'
+  })
+}))
+
 var port = 8080
 
 app.listen(port, function() {
